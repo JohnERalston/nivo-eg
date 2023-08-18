@@ -2,9 +2,6 @@
 // yarn add @nivo/bar
 import React from "react";
 import { ResponsiveBar } from "@nivo/bar";
-// import { BarItemTooltipOnClick } from "./BarItemTooltipOnClick";
-import { MyTooltip } from "./CustomTooltip";
-import { BarItem } from "./BarItemTooltipOnClick";
 // import { BasicTooltip, useTooltip } from "@nivo/tooltip";
 
 // make sure parent container have a defined height when using
@@ -13,7 +10,6 @@ import { BarItem } from "./BarItemTooltipOnClick";
 // website examples showcase many properties,
 // you'll often use just a few of them.
 export const MyResponsiveBar = ({ data /* see data tab */ }: { data: any }) => {
-  // const { showTooltipFromEvent } = useTooltip();
   return (
     <div style={{ height: "90vh", width: "60vw", position: "relative" }}>
       <ResponsiveBar
@@ -117,19 +113,7 @@ export const MyResponsiveBar = ({ data /* see data tab */ }: { data: any }) => {
         barAriaLabel={(e) =>
           e.id + ": " + e.formattedValue + " in country: " + e.indexValue
         }
-        // tooltip={MyTooltip}
-        barComponent={BarItem}
       />
     </div>
   );
 };
-
-{
-  /* <button
-        onMouseEnter={(event) =>
-          showTooltipFromEvent(<BasicTooltip id="total" value={2} />, event)
-        }
-      >
-        Show Tooltips
-      </button> */
-}
